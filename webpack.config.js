@@ -9,7 +9,10 @@ module.exports = {
   target: 'web',
   cache: true,
   entry: {
-    app: path.join(srcPath, 'app.js'),
+    app: [
+      'webpack-dev-server/client?http://localhost:3000',
+      'webpack/hot/only-dev-server',
+      path.join(srcPath, 'app.js')],
     common: ['react', 'react-router', 'alt']
   },
   resolve: {
@@ -19,7 +22,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'tmp'),
-    publicPath: '',
+    publicPath: '/scripts/',
     filename: '[name].js',
     library: ['Example', '[name]'],
     pathInfo: true
@@ -27,15 +30,12 @@ module.exports = {
 
   module: {
     loaders: [
-      {test: /\.js?$/, exclude: /node_modules/, loader: 'babel?cacheDirectory'}
+      {test: /\.js?$/, exclude: /node_modules/, loader: 'react-hot!babel?cacheDirectory'}
     ]
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.CommonsChunkPlugin('common', 'common.js'),
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: 'src/index.html'
-    }),
     new webpack.NoErrorsPlugin()
   ],
 

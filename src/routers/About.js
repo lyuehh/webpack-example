@@ -5,7 +5,7 @@ var About = React.createClass({
     return (
       <div>
         about 123
-        test
+        test aa bb
       </div>
     )
   }
