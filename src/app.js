@@ -1,6 +1,8 @@
 // Bootstrapping module
 import React from 'react';
 
+require('assets/styles/antd-0.7.3-beta6.css');
+
 import { Router, Route, Link, Redirect } from 'react-router';
 import { history } from 'react-router/lib/HashHistory';
 

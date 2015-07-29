@@ -30,7 +30,9 @@ module.exports = {
 
   module: {
     loaders: [
-      {test: /\.js?$/, exclude: /node_modules/, loader: 'react-hot!babel?cacheDirectory'}
+      {test: /\.js?$/, exclude: /node_modules/, loader: 'react-hot!babel?cacheDirectory'},
+      { test: /\.sass/, loader: "style!css!sass" },
+      { test: /\.css/, loader: "style!css" },
     ]
   },
   plugins: [
