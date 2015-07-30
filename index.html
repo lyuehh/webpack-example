@@ -5,10 +5,72 @@
     <meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' />
     <meta name='viewport' content='width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
     <title>Webpack example</title>
-    <!-- <link media='screen' rel='stylesheet' type='text/css' href='/src/assets/styles/antd&#45;0.7.3&#45;beta6.css' / -->
   </head>
   <body>
-    <div id="content"></div>
+    <div class="wrapper">
+      <header>
+        <div class="row">
+          <div class="col-6">
+            <div class="navbar-brand">
+              <h1>XX系统</h1>
+            </div>
+          </div>
+          <div class="col-18">
+            <div class="nav-wrapper">
+              <ul class="pull-left clearfix">
+                <li>
+                  <a href="">
+                    <i class="anticon anticon-line-chart"></i> App1
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="anticon anticon-notification"></i> App2
+                  </a>
+                </li>
+              </ul>
+              <ul class="nav-right clearfix">
+                <li>
+                  <a href="">
+                    <i class="anticon anticon-notification"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="anticon anticon-logout"></i>
+                  </a>
+                </li>
+                <!-- END Contacts menu-->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <aside class="aside">
+        <div class="aside-inner">
+          <nav class="sidebar">
+            <ul>
+              <li>
+                <a href="">
+                  <i class="anticon anticon-environment"></i>
+                  <span>aaa</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="anticon anticon-inbox"></i>
+                  <span>bbb</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <section>
+        <div id="content-wrapper"></div>
+      </section>
+      <footer></footer>
+    </div>
 
     <script src="/scripts/common.js"></script>
     <script src="/scripts/app.js"></script>

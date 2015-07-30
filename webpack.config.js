@@ -12,7 +12,8 @@ module.exports = {
     app: [
       'webpack-dev-server/client?http://localhost:3000',
       'webpack/hot/only-dev-server',
-      path.join(srcPath, 'app.js')],
+      path.join(srcPath, 'app.js')
+    ],
     common: ['react', 'react-router', 'alt']
   },
   resolve: {
@@ -31,8 +32,8 @@ module.exports = {
   module: {
     loaders: [
       {test: /\.js?$/, exclude: /node_modules/, loader: 'react-hot!babel?cacheDirectory'},
-      { test: /\.sass/, loader: "style!css!sass" },
-      { test: /\.css/, loader: "style!css" },
+      { test: /\.scss/, loader: 'style!css!sass' },
+      { test: /\.css/, loader: 'style!css' },
     ]
   },
   plugins: [

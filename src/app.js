@@ -2,6 +2,7 @@
 import React from 'react';
 
 require('assets/styles/antd-0.7.3-beta6.css');
+require('assets/styles/base.scss');
 
 import { Router, Route, Link, Redirect } from 'react-router';
 import { history } from 'react-router/lib/HashHistory';
@@ -39,4 +40,4 @@ React.render((
     </Route>
     <Redirect from="/" to="/inbox" />
   </Router>
-), document.body);
+), document.getElementById('content-wrapper'));
